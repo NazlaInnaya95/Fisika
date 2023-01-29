@@ -1,1 +1,14 @@
 %Nazla Innayah
+
+x=[-2 2] %batas 
+x=linspace(-2,2,100) %banyak elemen
+fx=exp(x).*cos(x) %fungsi 
+p1=polyval([1 1],x) %untuk derajat polinom yang tertinggi berada di sebelah kiri, semakin ke kanan, semakin rendah
+p3=polyval([-1/3 0 1 1],x)
+p4=polyval([-1/6 -1/3 0 1 1],x)
+p5=polyval([-1/30 -1/6 -1/3 0 1 1],x)
+subplot(2,2,1), plot(x,fx,'-r',x,p1,':k')
+title('aproksimasi exp(x).cos(x) hingga suku pertama')
+subplot(2,2,2) ,plot(x,fx,'-r',x,p3,':k')
+subplot(2,2,3) ,plot(x,fx,'-r',x,p4,':k')
+subplot(2,2,4) ,plot(x,fx,'-r',x,p5,':k')
